@@ -25,5 +25,14 @@ public class Pion {
         CouleurPions = couleurPions;
     }
 
+    public void deplacer() {
+        /*le pion ne peut pas depacer les cases 8 et + ou 0 et +
+                et aussi ne peut pas passer a travers un autre pion.*/
+        for(int pion = 0; pion < 0; pion++){
+            if( pion ) {
+                //positionX
+            }
+        }
+    }
 
 }

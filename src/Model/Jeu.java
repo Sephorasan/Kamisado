@@ -3,10 +3,13 @@ package Model;
 public class Jeu {
     private boolean aPerdu;
     private String dispositionCouleurs;
+    private boolean Joueur1, Joueur2;
 
-    public Jeu(boolean aPerdu, String dispositionCouleurs) {
+    public Jeu(boolean aPerdu, String dispositionCouleurs, boolean joueur1, boolean joueur2) {
         this.aPerdu = aPerdu;
         this.dispositionCouleurs = dispositionCouleurs;
+        this.Joueur1 = new Joueur();
+        this.Joueur2 = new Joueur();
     }
 
     public boolean isaPerdu() {
