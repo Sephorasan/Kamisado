@@ -1,6 +1,6 @@
 package Model;
 
 public class Case {
-    private String CouleurCases;
+    private String couleurCases;
 
 }

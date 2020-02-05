@@ -1,6 +1,6 @@
 package Model;
 
 public class Pion {
-    private int NombrePions;
-    private String CouleurPions;
+    private int nombrePions;
+    private String couleurPions;
 }

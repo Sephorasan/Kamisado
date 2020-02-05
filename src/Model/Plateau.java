@@ -3,9 +3,9 @@ package Model;
 import java.util.ArrayList;
 
 public class Plateau{
-    private int NombreCases;
-    private ArrayList<ListePieces> ListePieces;
-    private String DerniereCouleur;
-    private String DernierePositionCouleur;
+    private int nombreCases;
+    private ArrayList<ListePieces> listePieces;
+    private String derniereCouleur;
+    private String dernierePositionCouleur;
 
 }

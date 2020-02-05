@@ -1,6 +1,6 @@
 package Model;
 
 public class Joueur {
-    private boolean Joueur1;
-    private boolean Joueur2;
+    private boolean joueur1;
+    private boolean joueur2;
 }
