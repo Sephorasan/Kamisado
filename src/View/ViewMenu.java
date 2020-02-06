@@ -3,11 +3,11 @@ package View;
 import Controller.ControllerMenu;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Group;
+import javafx.scene.control.Menu;
 import javafx.scene.image.ImageView;
 import javafx.scene.media.MediaView;
 import javafx.stage.Screen;
 
-import java.awt.*;
 
 public class ViewMenu {
 
