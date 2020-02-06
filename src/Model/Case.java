@@ -14,4 +14,8 @@ public class Case {
     public void setCouleurCases(String couleurCases) {
         CouleurCases = couleurCases;
     }
+
+    public void recupCouleursCases{
+
+    }
 }
