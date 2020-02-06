@@ -19,18 +19,18 @@ public class ViewMenu {
     private ImageView imgBG;
     //private MediaView viewer;
 
-    ViewMenu(Menu model, Group root){
+    ViewMenu(Menu model, Group root) {
         this.root = root;
         this.model = model;
         initBackground();
 
         Rectangle2D primaryScreenBounds = Screen.getPrimary().getBounds(); // RÃ©cupÃ©ration de la taille de l'Ã©cran
         double posX = (primaryScreenBounds.getWidth() * 5) / 100;
-        double posY = (primaryScreenBounds.getHeight() * 20) /100;
+        double posY = (primaryScreenBounds.getHeight() * 20) / 100;
 
         btnJouer = initButton(posX, posY, "jouer");
-        btnOptions = initButton(posX, posY+70, "option");
-        btnQuitter = initButton(posX, posY+140, "quitter");
+        btnOptions = initButton(posX, posY + 70, "option");
+        btnQuitter = initButton(posX, posY + 140, "quitter");
 
         setVueCompleteMenu();
 
@@ -68,6 +68,7 @@ public class ViewMenu {
     void setVueCompleteMenu() {
 
         root.getChildren().clear();
+        root.getChildren().add(imgBG);
         //root.getChildren().add(viewer);
         //root.getChildren().add(titre);
         root.getChildren().add(btnJouer);
@@ -75,17 +76,16 @@ public class ViewMenu {
         root.getChildren().add(btnQuitter);
 
 
+
     }
-/*
     void setEvents(ControllerMenu mc) {
         btnJouer.setOnMouseClicked(mc);
         btnOptions.setOnMouseClicked(mc);
         btnQuitter.setOnMouseClicked(mc);
 
     }
-*/
 
-    public javafx.scene.control.Button getQuitter(){
+    public javafx.scene.control.Button getQuitter() {
         return btnQuitter;
     }
 
@@ -93,7 +93,7 @@ public class ViewMenu {
         return btnJouer;
     }
 
-    public javafx.scene.control.Button getOptions(){
+    public javafx.scene.control.Button getOptions() {
         return btnOptions;
     }
 }

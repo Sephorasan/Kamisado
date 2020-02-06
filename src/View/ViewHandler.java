@@ -9,14 +9,15 @@ import javafx.scene.control.Menu;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-
+import static Tools.Music.startMainMenuMusic;
 
 
 public class ViewHandler extends Application {
 
     private Stage primaryStage;
     private ViewMenu mp;
-
+    private ViewMenuOptions mo;
+    //private ViewMenuChoixVaisseaux mcv;
     private Menu model;
     private ControllerMenu controllerMenu;
     private Group root;
@@ -44,10 +45,13 @@ public class ViewHandler extends Application {
 
         model = new Menu();
 
+        mo = new ViewMenuOptions(model, root);
         mp = new ViewMenu(model, root);
+
 
         /*
         A réactivé (CODE SARAH)
+
         viewJeu = new ViewJeu(root,model);
         controllerMouse = new ControllerMouse(this, model);
 
@@ -56,8 +60,7 @@ public class ViewHandler extends Application {
         public ViewJeu getViewJeu(){return viewJeu;}*/
 
 
-
-        //controllerMenu = new ControllerMenu(this, model);
+        controllerMenu = new ControllerMenu(this, model);
         //scene.setOnKeyPressed(this.controllerGs);
 
         //LunchMenuPrincipale();
@@ -71,8 +74,58 @@ public class ViewHandler extends Application {
         primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setFullScreen(true);
         primaryStage.show();
+        startMainMenuMusic();
+    }
+    
+    public void setEventHandlerMenu(ControllerMenu cm) {
+        mp.setEvents(cm);
+        mo.setEvents(cm);
+        //mcv.setEvents(cm);
     }
 
+    /*public ViewJeu getVgs() {
+        return vgs;
+    }*/
+
+    /*public void setVgs(ViewJeu vgs) {
+        this.vgs = vgs;
+    }*/
+
+    public Stage getPrimaryStage() {
+        return primaryStage;
+    }
+
+    public ViewMenu getMp() {
+        return mp;
+    }
+
+    public ViewMenuOptions getMo(){
+        return mo;
+    }
+
+    public void setVueCompleteOptions() {
+        mo.setVueCompleteOptions();
+    }
+
+    public void setVueCompleteMenu() {
+        mp.setVueCompleteMenu();
+    }
+
+    /*public void setVueCompleteChoixVaisseaux() {
+        mcv.setImgBGChoixV();
+    }*/
+
+
+
+
+
+    /*public void setVueGameScene(String typeV){
+        vgs = new ViewJeu(modelS, root, typeV);
+        controllerGs.GameTLStart();
+        vgs.setVueGameScene();
+
+
+    }*/
 
 
 }

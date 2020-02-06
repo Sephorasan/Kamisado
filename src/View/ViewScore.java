@@ -8,7 +8,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 
 
-
 public class ViewScore {
 
     private Group root;
