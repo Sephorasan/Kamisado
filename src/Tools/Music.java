@@ -1,3 +1,4 @@
+/*
 package Tools;
 
 import javafx.scene.media.Media;
@@ -38,12 +39,14 @@ public class Music {
         mediaPlayer1.play();
     }
 
+*/
 /*    public static void AMBIANCE() {
         mediaPlayer1 = new MediaPlayer(new Media(Paths.get(AMBIANCE).toUri().toString()));
         mediaPlayer1.setCycleCount(1);
         mediaPlayer1.setVolume(volume);
         mediaPlayer1.play();
-    }*/
+    }*//*
+
 
     public static void Explosion() {
         mediaPlayer1 = new MediaPlayer(new Media(Paths.get(EXPLOSION).toUri().toString()));
@@ -64,10 +67,12 @@ public class Music {
         mediaPlayer.play();
     }
 
-   /* public static void setVolume(double volume) {
+   */
+/* public static void setVolume(double volume) {
         Music.volume = volume;
         if(mediaPlayer!=null) mediaPlayer.setVolume(volume);
-    }*/
+    }*//*
 
 
-}
+
+}*/

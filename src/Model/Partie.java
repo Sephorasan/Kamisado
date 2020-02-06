@@ -14,14 +14,14 @@ public class Partie {
         DernierePositionCouleur = dernierePositionCouleur;
     }
 
-    public void createPlateau() {
+/*    public void createPlateau() {
         String[][] partie = new String[COTE][COTE];
         for (int i = 0; i < Partie[].length; i++) {
             for (int j = 0; j < Partie[i].length; j++) {
 
             }
         }
-    }
+    }*/
 
     public String getDerniereCouleur() {
         return DerniereCouleur;
