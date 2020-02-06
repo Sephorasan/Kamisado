@@ -25,6 +25,4 @@ public class Position {
         this.X = x;
     }
 
-
-
 }

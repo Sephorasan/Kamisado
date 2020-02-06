@@ -15,7 +15,7 @@ public class Partie {
     }
 
     public void createPlateau() {
-        String[][] plateau = new String[COTE][COTE];
+        String[][] partie = new String[COTE][COTE];
         for (int i = 0; i < Partie[].length; i++) {
             for (int j = 0; j < Partie[i].length; j++) {
 

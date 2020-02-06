@@ -15,7 +15,7 @@ public class Case {
         CouleurCases = couleurCases;
     }
 
-    public void recupCouleursCases{
+    public void recupCouleursCases(){
 
     }
 }
