@@ -13,12 +13,12 @@ public class ControllerMouse implements EventHandler<MouseEvent> {
     public ControllerMouse(ViewHandler launcher, Jeu model) {
         this.model = model;
         this.launcher = launcher;
-        //this.launcher.setEnventHandlerInGame(this);
+        //this.launcher.setEnventHandlerJeu(this);
     }
 
     @Override
     public void handle(MouseEvent mouseEvent) {
         System.out.println(mouseEvent.getSource());
-        //if(mouseEvent.getSource().equals(launcher.getViewInGame())){}
+        //if(mouseEvent.getSource().equals(launcher.getViewJeu())){}
     }
 }
