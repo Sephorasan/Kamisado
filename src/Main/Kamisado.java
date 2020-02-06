@@ -8,4 +8,3 @@ public class Kamisado {
         Application.launch(ViewHandler.class);
     }
 }
-

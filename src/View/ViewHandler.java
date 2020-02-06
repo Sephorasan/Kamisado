@@ -52,11 +52,10 @@ public class ViewHandler extends Application {
         /*
         A réactivé (CODE SARAH)
 
-        viewJeu = new ViewJeu(root,model);
+        viewJeu = new ViewJeu(model, root);
         controllerMouse = new ControllerMouse(this, model);
 
-        public void setEventHandlerJeu(ControllerMouse cm){viewJeu.setEnvents(cm);}
-
+        public void setEventHandlerJeu(ControllerMouse controllerMouse){viewJeu.setEnvents(controllerMouse);}
         public ViewJeu getViewJeu(){return viewJeu;}*/
 
 
