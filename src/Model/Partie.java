@@ -38,13 +38,10 @@ public class Partie {
 
         for(int i=0; i<plateau.length; i++) {
             for(int j=0; j<plateau[i].length; j++) {
-                plateau =
-                // ici faut travailler
-
+                plateau[i][j]= new Case(/*Valeur[j]*/);
             }
         }
     }
-
 
     public String getDerniereCouleur() {
         return DerniereCouleur;
