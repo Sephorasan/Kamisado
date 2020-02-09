@@ -114,10 +114,6 @@ public class ViewHandler extends Application {
         mcv.setImgBGChoixV();
     }*/
 
-
-
-
-
     /*public void setVueGameScene(String typeV){
         vgs = new ViewJeu(modelS, root, typeV);
         controllerGs.GameTLStart();

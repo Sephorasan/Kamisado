@@ -4,6 +4,7 @@ import javafx.scene.image.Image;
 
 public class ViewJeu {
 
+    /*
     private Image ORANGE;
     private Image BLUE;
     private Image PURPLE;
@@ -28,6 +29,6 @@ public class ViewJeu {
         GREEN = new Image("Asset/Images/GREEN.png");
         BROWN = new Image("Asset/Images/BROWN.png");
     }
-
+*/
 
 }
