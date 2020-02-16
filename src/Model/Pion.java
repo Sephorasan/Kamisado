@@ -24,5 +24,16 @@ public class Pion {
         CouleurPions = couleurPions;
     }
 
+    /* ce code est à completer en fonction de la taille du tableau du plateau et de la couleur du pion et des cases
+
+    public boolean estValide(Deplacement deplacement){
+        if (deplacement.getDeplacementsurX() == 0)
+            if (this.getCouleurPions().equals("la-couleur-en-question")){
+                return ...
+            } else{
+                return ...
+                return false;
+            }
+    }*/
 
 }
