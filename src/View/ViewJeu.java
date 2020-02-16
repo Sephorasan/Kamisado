@@ -1,8 +1,8 @@
 package View;
 
-import javafx.scene.image.Image;
 
 public class ViewJeu {
+
 
     /*
     private Image ORANGE;

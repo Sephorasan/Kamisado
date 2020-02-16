@@ -15,17 +15,15 @@ import static Tools.Music.startMainMenuMusic;
 public class ViewHandler extends Application {
 
     private Stage primaryStage;
+    private ViewLancement ml;
     private ViewMenu mp;
     private ViewMenuOptions mo;
-    //private ViewMenuChoixVaisseaux mcv;
+    private ViewChoixJoueur vcj;
     private Menu model;
     private ControllerMenu controllerMenu;
     private Group root;
     private ViewJeu viewJeu;
     private ControllerMouse controllerMouse;
-
-
-    //private ControllerOptions controllerOptions;
 
 
     /**
@@ -42,12 +40,14 @@ public class ViewHandler extends Application {
 
         root = new Group();
         Scene scene = new Scene(root);
+        scene.getStylesheets().add("Asset/css/styleCss.css");
 
         model = new Menu();
 
         mo = new ViewMenuOptions(model, root);
         mp = new ViewMenu(model, root);
-
+        ml = new ViewLancement(model, root);
+        vcj = new ViewChoixJoueur(model, root);
 
         /*
         A réactivé (CODE SARAH)
@@ -65,8 +65,7 @@ public class ViewHandler extends Application {
         //LunchMenuPrincipale();
 
         // Affichage du menu
-
-        primaryStage.setTitle("Star CityFrag");
+        primaryStage.setTitle("Kamisado");
         primaryStage.setFullScreenExitHint("");
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
@@ -75,31 +74,40 @@ public class ViewHandler extends Application {
         primaryStage.show();
         startMainMenuMusic();
     }
-    
+
     public void setEventHandlerMenu(ControllerMenu cm) {
+        ml.setEvents(cm);
         mp.setEvents(cm);
         mo.setEvents(cm);
-        //mcv.setEvents(cm);
+        vcj.setEvents(cm);
     }
-
-    /*public ViewJeu getVgs() {
-        return vgs;
-    }*/
-
-    /*public void setVgs(ViewJeu vgs) {
-        this.vgs = vgs;
-    }*/
 
     public Stage getPrimaryStage() {
         return primaryStage;
+    }
+
+    public ViewLancement getMl() {
+        return ml;
     }
 
     public ViewMenu getMp() {
         return mp;
     }
 
-    public ViewMenuOptions getMo(){
+    public ViewChoixJoueur getMcj() {
+        return vcj;
+    }
+
+    public ViewMenuOptions getMo() {
         return mo;
+    }
+
+    public void setVueCompleteLancement() {
+        ml.setVueCompleteLancement();
+    }
+
+    public void setVueCompleteChoixJoueur() {
+        vcj.setVueCompleteChoixJoueur();
     }
 
     public void setVueCompleteOptions() {
@@ -109,18 +117,5 @@ public class ViewHandler extends Application {
     public void setVueCompleteMenu() {
         mp.setVueCompleteMenu();
     }
-
-    /*public void setVueCompleteChoixVaisseaux() {
-        mcv.setImgBGChoixV();
-    }*/
-
-    /*public void setVueGameScene(String typeV){
-        vgs = new ViewJeu(modelS, root, typeV);
-        controllerGs.GameTLStart();
-        vgs.setVueGameScene();
-
-
-    }*/
-
 
 }

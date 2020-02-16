@@ -1,38 +1,24 @@
 package View;
 
 import Controller.ControllerMenu;
-//import Model.Menu;
-//import Tools.Music;
+import Tools.EffetsSonores;
 import Tools.Music;
-import Tools.Path;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Group;
 import javafx.scene.control.Button;
 import javafx.scene.control.Menu;
 import javafx.scene.control.Slider;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.media.MediaView;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
-import javafx.scene.text.Text;
 import javafx.stage.Screen;
-
-//import static Tools.Music.Bip;
-//import static Tools.Music.Piou;
-
+import static Tools.EffetsSonores.BipRetour;
 
 public class ViewMenuOptions {
 
-    private Text titre;
     private Menu model;
     private ImageView imgBg;
-    private ImageView  imgbtn;
-    private MediaView bgVideo;
     private Group root;
     private Button btnRetour;
     private Slider musicSlider, effetsSlider;
-
 
     /**
      * Constructeur du menu principal
@@ -40,21 +26,23 @@ public class ViewMenuOptions {
      * @param model (Modèle correspondant au menu)
      * @param root  (Groupe principal de la vue)
      */
+
     ViewMenuOptions(Menu model, Group root) {
         this.root = root;
         this.model = model;
-        //initTitre();
         Rectangle2D primaryScreenBounds = Screen.getPrimary().getBounds(); // RÃ©cupÃ©ration de la taille de l'Ã©cran
-        double posX = (primaryScreenBounds.getWidth() * 11) / 100;
-        double posY = (primaryScreenBounds.getHeight() * 28) /100;
-        initButtons( posX, posY);
+        double posX = (primaryScreenBounds.getWidth() * 5) / 100;
+        double posY = (primaryScreenBounds.getHeight() * 20) /100;
+        initButtonMusic( posX + 1080, posY + 530);
+        initButtoneffets( posX + 1080, posY + 680);
 
-        btnRetour = initButton(posX-100, posY+80);
+        btnRetour = initButton(posX + 680, posY + 750);
+        btnRetour.setOnMousePressed(mouseEvent -> BipRetour());
         initBackground();
         setVueCompleteOptions();
     }
 
-    private void initButtons(double posX, double posY) {
+    private void initButtonMusic(double posX, double posY) {
         musicSlider = new Slider(0, 100, 100);
         musicSlider.setBlockIncrement(10);
         musicSlider.setShowTickLabels(true);
@@ -64,11 +52,21 @@ public class ViewMenuOptions {
         musicSlider.setLayoutY(posY);
     }
 
+    private void initButtoneffets(double posX, double posY) {
+        effetsSlider = new Slider(0, 100, 100);
+        effetsSlider.setBlockIncrement(10);
+        effetsSlider.setShowTickLabels(true);
+        effetsSlider.valueProperty().addListener(
+                (observable, oldValue, newValue) -> EffetsSonores.setVolumeEffets(newValue.intValue() / 100.));
+        effetsSlider.setLayoutX(posX);
+        effetsSlider.setLayoutY(posY);
+    }
+
     /**
      * Mise en place de l'image de fond en fonction de la taille de l'écran de l'utilisateur
      */
     private void initBackground() {
-        imgBg = new ImageView("Asset/Images/imgChoixVaisseaux.jpg");
+        imgBg = new ImageView("Asset/Images/fondOptions.png");
         Rectangle2D primaryScreenBounds = Screen.getPrimary().getBounds(); // Récupération de la taille de l'écran
         imgBg.setFitHeight((int) primaryScreenBounds.getHeight());
         imgBg.setFitWidth((int) primaryScreenBounds.getWidth());
@@ -88,29 +86,19 @@ public class ViewMenuOptions {
         return b;
     }
 
-    /*private void btnBackground() {
-        imgbtn= new ImageView("Asset/Images/btn1.png");
-
-    }*/
-
     void setVueCompleteOptions() {
         root.getChildren().clear();
         root.getChildren().add(imgBg);
-        //root.getChildren().add(titre);
         root.getChildren().add(btnRetour);
         root.getChildren().add(musicSlider);
-        /*root2.getChildren().add(imgbtn);*/
+        root.getChildren().add(effetsSlider);
     }
 
     void setEvents(ControllerMenu mc) {
         btnRetour.setOnMouseClicked(mc);
-        //titre.setOnMouseEntered(mc);
     }
 
     public Object getRetour() {
         return btnRetour;
     }
-    /**
-     * Ajoute a la vue tous les éléments composant le menu
-     */
 }

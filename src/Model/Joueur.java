@@ -6,6 +6,7 @@ public class Joueur{
     private int NbrPions = 16;
     private ArrayList<Pion> ListeDesPions;
 
+/*
     public Joueur(){
         this.ListeDesPions = ArrayList<>();
         for (int i = 0; i < NbrPions; i++ ){
@@ -19,6 +20,7 @@ public class Joueur{
             ListeDesPions.add(new Pion("BROWN"));
         }
     }
+*/
 
     public void deplacerPion(){
 
