@@ -1,17 +1,18 @@
 package Model;
 
 public class Case {
-    private String CouleurCases;
+    private Partie.Valeur CouleurCases;
 
-    public Case(String couleurCases) {
+
+    public Case(Partie.Valeur couleurCases) {
         CouleurCases = couleurCases;
     }
 
-    public String getCouleurCases() {
+    public Partie.Valeur getCouleurCases() {
         return CouleurCases;
     }
 
-    public void setCouleurCases(String couleurCases) {
+    public void setCouleurCases(Partie.Valeur couleurCases) {
         CouleurCases = couleurCases;
     }
 
