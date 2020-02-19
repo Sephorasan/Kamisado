@@ -1,6 +1,34 @@
 package Model;
 
 public class Pion {
+    /* Code Mehdi
+    private CouleurPions couleurPions;
+    private Position position;
+
+    public enum CouleurPions { ORANGE, PINK, BLUE, PURPLE, YELLOW, RED, GREEN, BROWN }
+
+    public Pion(CouleurPions couleurPions, Position position) {
+        this.couleurPions = couleurPions;
+        this.position = position;
+    }
+
+    public Position getPosition() {
+        return position;
+    }
+
+    public void setPosition(Position position) {
+        this.position = position;
+    }
+
+    public CouleurPions getCouleurPions() {
+        return couleurPions;
+    }
+
+    public void setCouleurPions(CouleurPions couleurPions) {
+        this.couleurPions = couleurPions;
+    }
+    */
+
     private String CouleurPions;
     private int Position;
 
