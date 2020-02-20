@@ -29,9 +29,9 @@ public class ViewMenu {
         double posX = (primaryScreenBounds.getWidth() * 5) / 100;
         double posY = (primaryScreenBounds.getHeight() * 20) / 100;
 
-        btnJouer = initButton(posX + 680, posY + 450, "jouer");
-        btnOptions = initButton(posX + 680, posY + 600, "option");
-        btnQuitter = initButton(posX + 680, posY + 750, "quitter");
+        btnJouer = initButton(posX + 400, posY + 300, "jouer");
+        btnOptions = initButton(posX + 400, posY + 450, "option");
+        btnQuitter = initButton(posX + 400, posY + 600, "quitter");
         btnJouer.setOnMousePressed(mouseEvent -> AMBIANCE());
         //btnJouer.setOnMousePressed(mouseEvent -> Bip());
         btnOptions.setOnMousePressed(mouseEvent -> Bip());

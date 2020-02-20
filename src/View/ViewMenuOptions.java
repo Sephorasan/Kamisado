@@ -33,10 +33,10 @@ public class ViewMenuOptions {
         Rectangle2D primaryScreenBounds = Screen.getPrimary().getBounds(); // RÃ©cupÃ©ration de la taille de l'Ã©cran
         double posX = (primaryScreenBounds.getWidth() * 5) / 100;
         double posY = (primaryScreenBounds.getHeight() * 20) /100;
-        initButtonMusic( posX + 1080, posY + 530);
-        initButtoneffets( posX + 1080, posY + 680);
+        initButtonMusic( posX + 800, posY + 400);
+        initButtoneffets( posX + 800, posY + 510);
 
-        btnRetour = initButton(posX + 680, posY + 750);
+        btnRetour = initButton(posX + 400, posY + 600);
         btnRetour.setOnMousePressed(mouseEvent -> BipRetour());
         initBackground();
         setVueCompleteOptions();

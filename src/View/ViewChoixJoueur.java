@@ -25,7 +25,7 @@ public class ViewChoixJoueur {
         Rectangle2D primaryScreenBounds = Screen.getPrimary().getBounds(); // RÃ©cupÃ©ration de la taille de l'Ã©cran
         double posX = (primaryScreenBounds.getWidth() * 5) / 100;
         double posY = (primaryScreenBounds.getHeight() * 20) / 100;
-        btnMenuP = initButton(posX + 680, posY + 750);
+        btnMenuP = initButton(posX + 400, posY + 600);
         btnMenuP.setOnMousePressed(mouseEvent -> startMainMenuMusic());
     }
 

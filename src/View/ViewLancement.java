@@ -33,7 +33,7 @@ public class ViewLancement {
         double posX = (primaryScreenBounds.getWidth() * 5) / 100;
         double posY = (primaryScreenBounds.getHeight() * 20) / 100;
 
-        appuyerIci = initButton(posX + 1000, posY + 790);
+        appuyerIci = initButton(posX + 610, posY + 590);
         appuyerIci.setOnMousePressed(mouseEvent -> Bip());
 
         setVueCompleteLancement();
